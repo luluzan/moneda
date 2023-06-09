@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+body {
+    font-family: 'Press Start 2P', cursive;
+    margin: 100px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url('https://images.unsplash.com/photo-1519418482467-96eca39b3f1b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');
+    background-size: cover;
+}
+
+section {
+    padding: 100px 200px;
+    backdrop-filter: blur(3px);
+}
+
+h1 {
+    font-size: 50px;
+    padding: 29px;
+    background: radial-gradient(#f9c20b, #fff);
+    border: 7px solid #000;
+}
+img {
+    max-width: 100px;
+}
+
+#gameContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: radial-gradient(#f9c20b, #fff);
+    border: 7px solid #000;
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 1);
+}
+
+#coinContainer {
+    width: 200px;
+    height: 200px;
+    position: relative;
+    transform-style: preserve-3d;
+    perspective: 800px;
+}
+
+#headCoin, #tailCoin {
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    position: absolute;
+    transform-style: preserve-3d;
+}
+
+#headCoin {
+    transform: rotateY(0deg);
+}
+
+#tailCoin {
+    transform: rotateY(180deg);
+}
+
+.animate-head {
+    animation: flip-coin 3s;
+}
+
+.animate-tail {
+    animation: flip-coin 3s reverse;
+}
+
+@keyframes flip-head {
+    0% {
+        transform: rotateY(0deg);
+    }
+    100% {
+        transform: rotateY(2160deg); 
+    }
+}
+
+@keyframes flip-tail {
+    0% {
+        transform: rotateY(0deg);
+    }
+    100% {
+        transform: rotateY(1980deg);
+    }
+}
+
+#toss {
+    padding: 5px;
+    background: none;
+    border: none;
+}
+
+#reset {
+    padding: 5px;
+    background: none;
+    border: none;
+    margin: 10px;
+}
+
+#toss, #reset {
+    font-family: 'Press Start 2P', cursive;
+    font-weight: bolder;
+    background-color: #f9c20b;
+    border: 2px solid #000;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 1);
+    padding: 15px;
+}
+
+p {
+    align-text: center;
+}
+
+.results {
+    padding-top: 7px;
+    text-align: left;
+}
+
+h2 {
+    color: #f9c20b;
+    background-color: #000;
+    padding: 5px;
+}
